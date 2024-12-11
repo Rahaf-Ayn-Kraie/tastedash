@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rahaf A.K" >
+    <meta name="description" content="My web project">
+    <meta name="keywords" content="html,css,web development">
+    <title>TasteDash</title>
+    <link rel="icon" href="./assets/img/Icon-image.png" type="img/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <script src="./assets/js/script.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <section class="info">
+        <div class="container">
+          <header>
+            <a href="./index.html" class="logo">
+              <h1><span class="title">
+                Taste</span>Dash
+              </h1>
+            </a>
+            <nav>
+              <a href="#">About</a>
+              <a href="#">Menu</a>
+              <a href="#">Service</a>
+              <a href="#">Shop</a>
+            </nav>
+            <button class="header-btn">Login</button>
+            <div id="loginModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login to Your Account</h2>
+                <form class="form" autocomplete="off">
+                  <input class="input-1" type="email" placeholder="Email" autocomplete="off" />
+                  <p class="message1"></p>
+                  <input class="input-2" type="password" maxlength="6" placeholder="Password" autocomplete="new-password" />
+                  <div class="message2"></div>
+                  <div class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe" />
+                    <label for="rememberMe">Remember Me</label>
+                  </div>
+                  <button class="login-btn" type="submit">Login</button>
+                </form>
+              </div>
+            </div>
+            <div class="hero-banner-content">
+              <h1 class="main-title">Order Your</h1>
+              <p>favourite foods</p>
+              <button class="btn">Buy now</button>
+            </div>
+          </header>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h1>Stay Home & Get All Your Essentials From Our Company</h1>
+          <p></p>
+          <div class="row flex">
+            <div class="col">
+              <img src="./assets/img/SD img.jpeg" alt="Software Developer image">
+              <h4>Software Developer</h4>
+              <p>Software developers create and maintain applications using programming languages...</p>
+              <div class="read-more">
+                <a class="secondary" href="#">Read More</a>
+              </div>
+            </div>
+            <div class="col">
+              <img src="./assets/img/NI img.jpeg" alt="Networking image">
+              <h4>Networking and Infrastructure</h4>
+              <p>Networking and infrastructure encompass the hardware and software enabling communication...</p>
+              <div class="read-more">
+                <a class="secondary" href="#">Read More</a>
+              </div>
+            </div>
+            <div class="col">
+              <img src="./assets/img/CS img.jpeg" alt="cybersecurity image">
+              <h4>Cybersecurity and Ethical Hacking</h4>
+              <p>Cybersecurity protects systems and data from threats, while ethical hacking identifie...</p>
+              <div class="read-more">
+                <a class="secondary" href="#">Read More</a>
+              </div>
+            </div>
+            <div class="col">
+              <img src="./assets/img/AI img.jpeg" alt="Artificial image">
+              <h4>Artificial Intelligence</h4>
+              <p>Artificial Intelligence (AI) simulates human intelligence in machines, enabling learning, reasoning...</p>
+              <div class="read-more">
+                <a class="secondary" href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="track-food">
+        <div class="container">
+          <h1>Get Your Food</h1>
+          <p>
+            Find the our nearest restaurant to satisfy your cravings with just a click.
+            Our interactive map helps you explore food options around you for a quick
+            and easy delivery experience. 
+          </p>
+          <button class="track-btn">Locate Me</button>
+        </div>
+        <div class="map">
+          
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div>
+            <h3>Join our company</h3>
+            <div class="newsletter">
+              <p>Receive our latest dish.</p>
+              <input type="text">
+              <a class="join-btn" href="#">Join</a>
+            </div>
+          </div>
+          <div>
+            <h3>Our Service</h3>
+            <div class="footer-links">
+              <a href="">Great Daily Deal</a>
+              <a href="">Free Delivery</a>
+              <a href="">Best Price Ever</a>
+            </div>
+          </div>
+          <div>
+            <h3>About</h3>
+            <div class="footer-links">
+              <a href="#">Our Story</a>
+              <a href="#">Why TasteDash FAQ</a>
+              <a href="#">Offers</a>
+            </div>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <div class="footer-links">
+              <a href="#">How to Find Us</a>
+              <a href="#">T: +1 (204) 321 789</a>
+              <a href="mailto:food@tastedash.com">E: food@tastedash.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="authors">
+            <p>&copy; 2024</p>
+            <a href="https://github.com/Rahaf-Ayn-Kraie" target="_blank">Rahaf A.K</a>
+            <a href="https://github.com/Gur512" target="_blank">Gurpreet Kaur</a>
+          </div>
+        </div>
+      </div>
+    </footer>      
+  </body>
+</html>
