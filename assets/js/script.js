@@ -5,6 +5,13 @@ import * as utils from "./utils.js";
 const trackMe = utils.select('.track-btn');
 const serchbtn = utils.select('.search-here');
 const input = utils.select('.location');
+const modal = utils.select('.modal');
+const loginBtn = utils.select(".header-btn");
+const closeBtn = utils.select(".close");
+const login = utils.select('.login-btn');
+const emailInput = utils.select('.input-1');
+const password = utils.select('.input-2');
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbG1hLWRldiIsImEiOiJjbGJncnJqc2wwaXhjM29xd2liMXYzbmE4In0.c2LzFGTr8v0YUQlSfSe3mQ';
 
@@ -40,19 +47,22 @@ const accuracy = {
 function showMap(position) {
     const { latitude, longitude } = position;
 
-    map.flyTo({
-        center: [userLocation.longitude, userLocation.latitude],
-        essential: true 
-    });
-
+    
     if (userLocation) { 
+        map.flyTo({
+            center: [userLocation.longitude, userLocation.latitude],
+            essential: true 
+        });
         if (marker) { 
             marker.remove(); 
         } 
         marker = new mapboxgl.Marker({ 
             color: "#de9c5b", 
-        }).setLngLat([longitude, latitude]) 
-          .addTo(map); 
+        })
+        .setLngLat([longitude, latitude]) 
+        .addTo(map); 
+    } else { 
+        map.setCenter([longitude, latitude]); 
     }
 }
 
@@ -66,8 +76,27 @@ utils.listen('click', trackMe, () => {
     }
 });
 
+showMap(defaultLocation);
+
 utils.listen('click', serchbtn, () => {
     input.value = '';
 });
 
-showMap(defaultLocation);
+utils.listen('click', loginBtn, () => {
+    modal.style.display = "block";
+});
+
+utils.listen('click', closeBtn, () => {
+    modal.style.display = "none";
+});
+
+
+utils.listen('click', login, (event) => {
+    event.preventDefault();
+    if(emailInput.value.length && password.value.length > 0){
+        modal.style.display = 'none';
+    }else {
+        emailInput.style.borderColor = "#f00";
+        password.style.borderColor = "#f00";
+    }
+});
