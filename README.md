@@ -48,10 +48,10 @@ This project is built using:
 
 
 # Team 🤝
-Rahaf A.K 🌟
-GitHub
-Gurpreet Kaur 🚀
-GitHub
+- **Rahaf A.K 🌟**
+
+- **Gurpreet Kaur 🚀**
+
 License 🔒
 This project is licensed under the MIT License. See the LICENSE file for details.
 
