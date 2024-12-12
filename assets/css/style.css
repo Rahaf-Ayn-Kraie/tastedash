@@ -301,9 +301,13 @@ input.location[type=text] {
   height: 100svh;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
   p {
-  font-size: 3rem;
+  font-size: 20px;
   margin-top: 10px;
   text-align: center;
   padding: 10px;
