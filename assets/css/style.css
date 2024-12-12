@@ -14,9 +14,9 @@
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -369,6 +369,7 @@ header,.form:focus, :active {
   background-color: var(--app-light-gray-color);
   height: 100svh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
 
@@ -394,6 +395,7 @@ header,.form:focus, :active {
   width: auto;
   margin: 0 auto;
   display: block;
+  color: #fff;
   margin-top: 30px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -404,8 +406,20 @@ header,.form:focus, :active {
 }
 
 .track-btn:hover {
-  background-color: rgb(222, 156, 91);
+  background-color: #de9c5b;
   transform: scale(1);
+}
+
+#map {
+  height: 300px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  /* background-color: #007fff; */
+  /* position: absolute;
+  top: 0;
+  bottom: 0; */
+  /* width: 100%; */
 }
 
 footer {
