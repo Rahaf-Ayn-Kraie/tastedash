@@ -132,18 +132,6 @@ nav a:hover {
   text-align: center;
 }
 
-.message1,.message2 {
-  color: #f33;
-  font-size: 15px;
-  width: auto;
-  display: block;
-  margin: 0;  
-  margin-left: 15px;
-  text-align: left;
-  padding: 0;
-  height: 20px;
-}
-
 .close {
   color: #333;
   float: right;
@@ -172,7 +160,7 @@ nav a:hover {
 .input-1, .input-2 {
   display: block;
   width: 90%;
-  margin: 1px auto;
+  margin: 2em auto;
   padding: 10px;
   border: 1px solid #5f4031;
   border-radius: 5px;
@@ -203,13 +191,13 @@ nav a:hover {
   align-items: center;
   justify-content: flex-start;
   height: 0rem;
-  margin-top: 25px;
+  margin-top: 5em;
   background-color: #c0392b;
 }
 
 .remember-me input[type="checkbox"] {
   margin: 0px;
-  margin-left: 17px;
+  margin-left: 15px;
   width: 15rem;
   margin-bottom: 32px;
   vertical-align: middle;
@@ -217,11 +205,10 @@ nav a:hover {
 
 .remember-me label {
   font-size: 1.5rem;
-  margin-right: 18rem;
+  margin-right: 19rem;
   text-align: left;
-  margin-left: 10px;
   white-space: nowrap;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .hero-banner-content{
