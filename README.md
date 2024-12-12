@@ -46,7 +46,8 @@ This project is built using:
    ```bash
    git clone https://github.com/Rahaf-Ayn-Kraie/tastedash.git
 
-   Team 🤝
+
+ Team 🤝
 Rahaf A.K 🌟
 GitHub
 Gurpreet Kaur 🚀
