@@ -46,6 +46,14 @@ This project is built using:
    ```bash
    git clone https://github.com/Rahaf-Ayn-Kraie/tastedash.git
 
+   Team 🤝
+Rahaf A.K 🌟
+GitHub
+Gurpreet Kaur 🚀
+GitHub
+License 🔒
+This project is licensed under the MIT License. See the LICENSE file for details.
+
 
  ## IDEs/Editors
 
