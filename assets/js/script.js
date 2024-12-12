@@ -3,32 +3,57 @@
 import * as utils from "./utils.js";
 
 const trackMe = utils.select('.track-btn');
+const serchbtn = utils.select('.search-here');
+const input = utils.select('.location');
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbG1hLWRldiIsImEiOiJjbGJncnJqc2wwaXhjM29xd2liMXYzbmE4In0.c2LzFGTr8v0YUQlSfSe3mQ';
 
-function getLocation(position) {
-    let { latitude, longitude } = position.coords;
-
-    console.log(
-        `Latitude: ${latitude}\n` + 
-        `Longitude: ${longitude}`
-    );
-
-    showMap(position);
-    map.flyTo({
-        center: [longitude, latitude],
-        essential: true // This animation is considered essential with
-        //respect to prefers-reduced-motion
-    });
+const defaultLocation = {
+    latitude: 51.5074,
+    longitude: -0.1278
 }
 
-// The 'failure' callback function
+let userLocation = null;
+let marker = null;
+
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [defaultLocation.longitude, defaultLocation.latitude],
+    zoom: 14
+});
+
+function getLocation(position) {
+    let { latitude, longitude } = position.coords; 
+    userLocation = { latitude, longitude };
+    showMap(userLocation);
+}
+
 function errorHandler() {
     console.log('Unable to retrieve your location');
 }
 
 const accuracy = {
     enableHeightAccuracy: true
+}
+
+function showMap(position) {
+    const { latitude, longitude } = position;
+
+    map.flyTo({
+        center: [userLocation.longitude, userLocation.latitude],
+        essential: true 
+    });
+
+    if (userLocation) { 
+        if (marker) { 
+            marker.remove(); 
+        } 
+        marker = new mapboxgl.Marker({ 
+            color: "#de9c5b", 
+        }).setLngLat([longitude, latitude]) 
+          .addTo(map); 
+    }
 }
 
 utils.listen('click', trackMe, () => {
@@ -39,23 +64,10 @@ utils.listen('click', trackMe, () => {
     } else {
         console.log('Geolocation is not supported by your browser');
     }
-
 });
 
-function showMap(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+utils.listen('click', serchbtn, () => {
+    input.value = '';
+});
 
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [longitude, latitude],
-      zoom: 14
-    });
-
-    // Add marker for user's location
-    new mapboxgl.Marker({
-        color: "#de9c5b",
-    }).setLngLat([longitude, latitude])
-      .addTo(map);
-}
+showMap(defaultLocation);
