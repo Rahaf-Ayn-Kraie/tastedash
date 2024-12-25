@@ -1,0 +1,20 @@
+{
+  "name": "rahaf_api_assignment_04",
+  "version": "1.0.0",
+  "description": "Make a delivery web",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Web Development"
+  ],
+  "author": "Rahaf",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

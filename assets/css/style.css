@@ -290,7 +290,6 @@ input.location[type=text] {
 
   p {
   font-size: 20px;
-  margin-top: 10px;
   text-align: center;
   padding: 10px;
   color: #4B2F20;
@@ -373,7 +372,8 @@ input.location[type=text] {
 }
 
 .service-info h3 {
-  font-size: 1.5rem;
+  padding-top: 15px;
+  font-size: 2rem;
   margin: 10px 0;
   font-weight: bold;
   color: var(--app-choclate-color);
