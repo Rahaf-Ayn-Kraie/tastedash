@@ -281,7 +281,7 @@ input.location[type=text] {
 .services{
   background-color: #f7efe7;
   height: 100svh;
-  padding-top: 50px;
+  padding-top: 50px; 
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -290,7 +290,7 @@ input.location[type=text] {
 
   p {
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   padding: 10px;
   color: #4B2F20;
   }
@@ -352,6 +352,7 @@ input.location[type=text] {
 .order-now-btn {
   width: auto;
   margin: 0 auto;
+  color: #fff;
   display: block;
   margin-top: 30px;
   font-size: 1.5rem;
@@ -390,7 +391,7 @@ input.location[type=text] {
   h1{
     color: var(--app-choclate-color);
     font-weight: 600;
-    margin-top: 50px;
+    margin-top: 15px;
     font-size: 28px;
     padding-bottom: 20px;
   }
